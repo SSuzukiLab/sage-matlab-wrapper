@@ -31,8 +31,7 @@ classdef SageWrapper < handle
             obj.sage = py.importlib.import_module('sage.all');
             obj.ns = py.getattr(obj.sage, '__dict__');
         end
-        function ret = exec(obj, exprs)
-            expr=join(exprs,newline());
+        function ret = exec(obj, expr)
             if nargout==0
                 py.builtins.exec(expr, obj.ns, obj.ns);
             else
@@ -40,7 +39,7 @@ classdef SageWrapper < handle
             end
         end
         function let(obj,arg1,arg2)
-            obj.exec(sprintf("%s=%s",arg1,string(arg2)));
+            
         end
         function ret=get.status(obj)
             ret=pyenv().Status;

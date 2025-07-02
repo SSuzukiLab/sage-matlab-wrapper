@@ -1,0 +1,1 @@
+/Applications/SageMath-10-6.app/Contents/Frameworks/Sage.framework/Versions/Current/venv/bin/python3
