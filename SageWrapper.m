@@ -1,6 +1,6 @@
 classdef SageWrapper < handle
     properties(Constant)
-        H=SageWrapper()
+        H SageWrapper=SageWrapper() 
     end
     properties 
         ns   % Sage global namespace (__dict__)
